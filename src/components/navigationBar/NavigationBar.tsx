@@ -16,7 +16,7 @@ const AddressItem: React.FC<{
 		<NavLink
 			to={getAddressPath(address)}
 			className={({ isActive }) =>
-				`navigationBarAddressText ${isActive ? "active" : ""}`
+				`navigationBarNavText ${isActive ? "active" : ""}`
 			}
 		>
 			{address}
@@ -66,6 +66,7 @@ const NavigationBar: React.FC = () => (
 		<a
 			href="https://www.instagram.com/marisa.odl"
 			className="navigationBarNavText"
+			target="_blank"
 		>
 			ig
 		</a>
