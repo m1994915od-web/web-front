@@ -1,0 +1,14 @@
+.paintingPageContainer {
+	display: grid;
+	grid-template-columns: repeat(2, 170px);
+	gap: 60px;
+	padding-top: 50px;
+	padding-left: 90px;
+}
+
+.paintingPageImage {
+	width: 170px;
+	height: 170px;
+	object-fit: cover;
+	cursor: pointer;
+}

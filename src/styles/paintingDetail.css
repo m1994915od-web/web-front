@@ -1,0 +1,27 @@
+.paintingDetailContainer {
+	background-color: aqua;
+	padding-top: 50px;
+	padding-left: 90px;
+}
+
+.paintingDetailImage {
+	width: 600px;
+	height: auto;
+	object-fit: cover;
+	margin-bottom: 40px;
+}
+
+.paintingDetailTitle {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.paintingDetailDescription {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.paintingDetailSize {
+	font-size: 16px;
+}

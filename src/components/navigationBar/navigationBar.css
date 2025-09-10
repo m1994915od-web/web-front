@@ -1,0 +1,45 @@
+.navigationBarContainer {
+	padding: 20px;
+	max-width: 300px;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.navigationBarAddressContainer {
+	margin-bottom: 12px;
+}
+
+.navigationBarAddressText {
+	display: block;
+	color: #000;
+	font-size: 16px;
+	margin-bottom: 12px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.navigationBarAddressText.active,
+.navigationBarWorkName.active,
+.navigationBarNavText.active {
+	color: #be0000;
+}
+
+.navigationBarWorkName {
+	display: block;
+	color: #000;
+	font-size: 16px;
+	margin-bottom: 6px;
+	font-weight: 500;
+	margin-left: 50px;
+	cursor: pointer;
+}
+
+.navigationBarNavText {
+	color: #000;
+	font-size: 16px;
+	margin-bottom: 12px;
+	font-weight: 500;
+	cursor: pointer;
+}
