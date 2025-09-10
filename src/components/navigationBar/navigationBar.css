@@ -5,41 +5,74 @@
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease-in-out;
+	z-index: 1000;
 }
 
-.navigationBarAddressContainer {
-	margin-bottom: 12px;
+.navigationBarContainer.open {
+	transform: translateX(0);
 }
 
-.navigationBarAddressText {
-	display: block;
-	color: #000;
-	font-size: 16px;
-	margin-bottom: 12px;
-	font-weight: 500;
+.burgerButton {
+	display: none;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 1100;
+	background: none;
+	border: none;
+	font-size: 24px;
 	cursor: pointer;
 }
 
-.navigationBarAddressText.active,
-.navigationBarWorkName.active,
-.navigationBarNavText.active {
-	color: #be0000;
+.navigationBarAddressContainer {
+	margin-bottom: 10px;
+}
+
+.navigationBarNavText {
+	display: block;
+	color: #000;
+	font-size: 16px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	padding: 2px;
+	font-weight: 500;
 }
 
 .navigationBarWorkName {
 	display: block;
 	color: #000;
 	font-size: 16px;
-	margin-bottom: 6px;
-	font-weight: 500;
-	margin-left: 50px;
+	margin-bottom: 4px;
+	margin-left: 30px;
 	cursor: pointer;
+	padding: 2px;
 }
 
-.navigationBarNavText {
-	color: #000;
-	font-size: 16px;
-	margin-bottom: 12px;
-	font-weight: 500;
-	cursor: pointer;
+.navigationBarNavText.active,
+.navigationBarWorkName.active {
+	color: #fff;
+	background-color: #000;
+}
+
+@media (min-width: 681px) {
+	.navigationBarContainer {
+		transform: translateX(0);
+	}
+}
+
+@media (max-width: 680px) {
+	.burgerButton {
+		display: block;
+	}
+
+	.navigationBarContainer {
+		box-shadow: 2px 0 5px #00000033;
+		background: #fff;
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding-top: 80px;
+	}
 }

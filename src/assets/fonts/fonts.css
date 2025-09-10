@@ -1,0 +1,48 @@
+@font-face {
+	font-family: "IBMPlexMono";
+	src: "./IBMPlexMono-Thin.ttf" format("opentype");
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "IBMPlexMono";
+	src: "./IBMPlexMono-ExtraLight.ttf" format("opentype");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "IBMPlexMono";
+	src: "./IBMPlexMono-Light.ttf" format("opentype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "IBMPlexMono";
+	src: "./IBMPlexMono-Regular.ttf" format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "IBMPlexMono";
+	src: "./IBMPlexMono-Medium.ttf" format("opentype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "IBMPlexMono";
+	src: "./IBMPlexMono-SemiBold.ttf" format("opentype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "IBMPlexMono";
+	src: "./IBMPlexMono-Bold.ttf" format("opentype");
+	font-weight: 700;
+	font-style: normal;
+}
