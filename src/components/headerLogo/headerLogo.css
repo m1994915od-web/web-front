@@ -1,5 +1,5 @@
 .headerLogoContainer {
-	padding-right: 40px;
+	padding-right: clamp(10px, 2.5vw, 50px);
 	padding-top: 20px;
 	display: flex;
 	width: 100%;
@@ -8,10 +8,17 @@
 }
 
 .headerLogoBox {
-	padding: 13px 58px;
-	max-height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: clamp(150px, 20vw, 280px);
+	height: clamp(35px, 5vw, 66px);
+	/* width: 280px; */
+	/* height: 66px; */
+	background-color: #e6e6e6;
 }
 
 .headerLogoText {
-	font-size: 40px;
+	font-size: clamp(20px, 4vw, 40px);
+	/* font-size: 40px; */
 }

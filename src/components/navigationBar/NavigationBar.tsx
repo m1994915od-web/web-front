@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { data } from "../../data";
 import "./navigationBar.css";
@@ -11,13 +11,15 @@ const getPaintingPath = (address: string, title: string) =>
 const AddressItem: React.FC<{
 	address: string;
 	paintings: Array<{ title: string }>;
-}> = ({ address, paintings }) => (
+	setIsOpen: (isOpen: boolean) => void;
+}> = ({ address, paintings, setIsOpen }) => (
 	<div className="navigationBarAddressContainer">
 		<NavLink
 			to={getAddressPath(address)}
 			className={({ isActive }) =>
 				`navigationBarNavText ${isActive ? "active" : ""}`
 			}
+			onClick={() => setIsOpen(false)}
 		>
 			{address}
 		</NavLink>
@@ -29,6 +31,7 @@ const AddressItem: React.FC<{
 						className={({ isActive }) =>
 							`navigationBarWorkName ${isActive ? "active" : ""}`
 						}
+						onClick={() => setIsOpen(false)}
 					>
 						{painting.title}
 					</NavLink>
@@ -38,39 +41,58 @@ const AddressItem: React.FC<{
 	</div>
 );
 
-const NavigationBar: React.FC = () => (
-	<div className="navigationBarContainer">
-		{data.map((item, index) => (
-			<AddressItem
-				key={index}
-				address={item.address}
-				paintings={item.paintings}
-			/>
-		))}
-		<NavLink
-			to="/statement"
-			className={({ isActive }) =>
-				`navigationBarNavText ${isActive ? "active" : ""}`
-			}
-		>
-			statement
-		</NavLink>
-		<NavLink
-			to="/cv"
-			className={({ isActive }) =>
-				`navigationBarNavText ${isActive ? "active" : ""}`
-			}
-		>
-			cv
-		</NavLink>
-		<a
-			href="https://www.instagram.com/marisa.odl"
-			className="navigationBarNavText"
-			target="_blank"
-		>
-			ig
-		</a>
-	</div>
-);
+const NavigationBar: React.FC = () => {
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggleMenu = () => setIsOpen(!isOpen);
+
+	return (
+		<>
+			<button
+				className="burgerButton"
+				onClick={toggleMenu}
+				aria-label="Toggle menu"
+			>
+				☰
+			</button>
+			<div className={`navigationBarContainer ${isOpen ? "open" : ""}`}>
+				{data.map((item, index) => (
+					<AddressItem
+						key={index}
+						address={item.address}
+						paintings={item.paintings}
+						setIsOpen={setIsOpen}
+					/>
+				))}
+				<NavLink
+					to="/statement"
+					className={({ isActive }) =>
+						`navigationBarNavText ${isActive ? "active" : ""}`
+					}
+					onClick={() => setIsOpen(false)}
+				>
+					statement
+				</NavLink>
+				<NavLink
+					to="/cv"
+					className={({ isActive }) =>
+						`navigationBarNavText ${isActive ? "active" : ""}`
+					}
+					onClick={() => setIsOpen(false)}
+				>
+					cv
+				</NavLink>
+				<a
+					href="https://www.instagram.com/marisa.odl"
+					className="navigationBarNavText"
+					target="_blank"
+					onClick={() => setIsOpen(false)}
+				>
+					ig
+				</a>
+			</div>
+		</>
+	);
+};
 
 export default NavigationBar;

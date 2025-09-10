@@ -40,5 +40,17 @@ textarea {
 
 .appPageContainer {
 	max-width: calc(100% - 300px);
+	min-width: 500px;
 	width: 100%;
+}
+
+@media (max-width: 680px) {
+	.appMainContainer {
+		flex-direction: column;
+	}
+	.appPageContainer {
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+	}
 }

@@ -5,6 +5,25 @@
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease-in-out;
+	z-index: 1000;
+}
+
+.navigationBarContainer.open {
+	transform: translateX(0);
+}
+
+.burgerButton {
+	display: none;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 1100;
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
 }
 
 .navigationBarAddressContainer {
@@ -31,9 +50,29 @@
 	padding: 2px;
 }
 
-.navigationBarAddressText.active,
-.navigationBarWorkName.active,
-.navigationBarNavText.active {
-	color: #ffffff;
+.navigationBarNavText.active,
+.navigationBarWorkName.active {
+	color: #fff;
 	background-color: #000;
+}
+
+@media (min-width: 681px) {
+	.navigationBarContainer {
+		transform: translateX(0);
+	}
+}
+
+@media (max-width: 680px) {
+	.burgerButton {
+		display: block;
+	}
+
+	.navigationBarContainer {
+		box-shadow: 2px 0 5px #00000033;
+		background: #fff;
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding-top: 80px;
+	}
 }
