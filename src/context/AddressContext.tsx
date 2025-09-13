@@ -8,6 +8,8 @@ import {
 import axios from "axios";
 import type { Address } from "../types";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 interface AddressContextType {
 	addresses: Address[];
 	loading: boolean;
@@ -28,7 +30,7 @@ export function AddressProvider({ children }: { children: ReactNode }) {
 		}
 
 		axios
-			.get("http://localhost:1337/api/addresses?populate=artworks.images")
+			.get(apiUrl)
 			.then((res) => {
 				const data = res.data.data;
 				setAddresses(data);
