@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { data } from "../../data";
+import { useAddresses } from "../../context/AddressContext";
+import type { Artwork } from "../../types";
 import "./navigationBar.css";
 
 const getAddressPath = (address: string) =>
@@ -10,7 +11,7 @@ const getPaintingPath = (address: string, title: string) =>
 
 const AddressItem: React.FC<{
 	address: string;
-	paintings: Array<{ title: string }>;
+	paintings: Artwork[];
 	setIsOpen: (isOpen: boolean) => void;
 }> = ({ address, paintings, setIsOpen }) => (
 	<div className="navigationBarAddressContainer">
@@ -43,6 +44,7 @@ const AddressItem: React.FC<{
 
 const NavigationBar: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const { addresses } = useAddresses();
 
 	const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -56,11 +58,11 @@ const NavigationBar: React.FC = () => {
 				☰
 			</button>
 			<div className={`navigationBarContainer ${isOpen ? "open" : ""}`}>
-				{data.map((item, index) => (
+				{addresses.map((item, index) => (
 					<AddressItem
 						key={index}
-						address={item.address}
-						paintings={item.paintings}
+						address={item.name}
+						paintings={item.artworks}
 						setIsOpen={setIsOpen}
 					/>
 				))}

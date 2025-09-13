@@ -1,14 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { data } from "../data";
+import { useAddresses } from "../context/AddressContext";
 import "../styles/paintingDetail.css";
 
 const PaintingDetail: React.FC = () => {
+	const { addresses } = useAddresses();
 	const { address, title } = useParams<{ address: string; title: string }>();
-	const location = data.find(
-		(item) => item.address === decodeURIComponent(address || "")
+	const location = addresses.find(
+		(item) => item.name === decodeURIComponent(address || "")
 	);
-	const painting = location?.paintings.find(
+	const painting = location?.artworks.find(
 		(p) => p.title === decodeURIComponent(title || "")
 	);
 
@@ -17,13 +18,25 @@ const PaintingDetail: React.FC = () => {
 	return (
 		<div className="paintingDetailContainer">
 			<img
-				src={painting.link}
+				src={painting.images[0]?.url}
 				alt={painting.title}
 				className="paintingDetailImage"
 			/>
+			<div>
+				{painting.images.slice(1).map((img, index) => (
+					<img
+						key={index}
+						src={img.url}
+						alt={`${painting.title} - ${index + 2}`}
+						className="paintingDetailImage"
+					/>
+				))}
+			</div>
 			<h1 className="paintingDetailTitle">{painting.title}</h1>
 			<p className="paintingDetailDescription">{painting.description}</p>
-			<p className="paintingDetailSize">Size: {painting.size}</p>
+			{painting.size && (
+				<p className="paintingDetailSize">Size: {painting.size}</p>
+			)}
 		</div>
 	);
 };
