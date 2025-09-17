@@ -20,7 +20,7 @@ const PaintingsPage: React.FC = () => {
 					<Link
 						to={`/painting/${encodeURIComponent(
 							location.name
-						)}/${encodeURIComponent(painting.title)}`}
+						)}/${encodeURIComponent(painting.page)}`}
 					>
 						<img
 							className="paintingPageImage"
