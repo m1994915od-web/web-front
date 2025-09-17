@@ -5,12 +5,12 @@ import "../styles/paintingDetail.css";
 
 const PaintingDetail: React.FC = () => {
 	const { addresses } = useAddresses();
-	const { address, title } = useParams<{ address: string; title: string }>();
+	const { address, page } = useParams<{ address: string; page: string }>();
 	const location = addresses.find(
 		(item) => item.name === decodeURIComponent(address || "")
 	);
 	const painting = location?.artworks.find(
-		(p) => p.title === decodeURIComponent(title || "")
+		(p) => p.page === decodeURIComponent(page || "")
 	);
 	if (!painting) return <div>Painting not found</div>;
 
