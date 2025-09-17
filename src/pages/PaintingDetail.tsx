@@ -12,11 +12,16 @@ const PaintingDetail: React.FC = () => {
 	const painting = location?.artworks.find(
 		(p) => p.title === decodeURIComponent(title || "")
 	);
-
 	if (!painting) return <div>Painting not found</div>;
-
 	return (
 		<div className="paintingDetailContainer">
+			<div className="paintingInfo">
+				<h1 className="paintingDetailTitle">{painting.title}</h1>
+				<p className="paintingDetailDescription">{painting.description}</p>
+				{painting.size && (
+					<p className="paintingDetailSize">Size: {painting.size}</p>
+				)}
+			</div>
 			<img
 				src={painting.images[0]?.url}
 				alt={painting.title}
@@ -32,11 +37,6 @@ const PaintingDetail: React.FC = () => {
 					/>
 				))}
 			</div>
-			<h1 className="paintingDetailTitle">{painting.title}</h1>
-			<p className="paintingDetailDescription">{painting.description}</p>
-			{painting.size && (
-				<p className="paintingDetailSize">Size: {painting.size}</p>
-			)}
 		</div>
 	);
 };
