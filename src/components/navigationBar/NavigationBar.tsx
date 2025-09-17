@@ -6,8 +6,8 @@ import "./navigationBar.css";
 
 const getAddressPath = (address: string) =>
 	`/address/${encodeURIComponent(address)}`;
-const getPaintingPath = (address: string, title: string) =>
-	`/painting/${encodeURIComponent(address)}/${encodeURIComponent(title)}`;
+const getPaintingPath = (address: string, page: string) =>
+	`/painting/${encodeURIComponent(address)}/${encodeURIComponent(page)}`;
 
 const AddressItem: React.FC<{
 	address: string;
@@ -28,7 +28,7 @@ const AddressItem: React.FC<{
 			<ul key={pIndex}>
 				<li>
 					<NavLink
-						to={getPaintingPath(address, painting.title)}
+						to={getPaintingPath(address, painting.page)}
 						className={({ isActive }) =>
 							`navigationBarWorkName ${isActive ? "active" : ""}`
 						}

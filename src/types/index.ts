@@ -9,16 +9,16 @@ export interface Address {
 }
 
 export interface Artwork {
-	createdAt: string;
-	description: string;
-	documentId: string;
+	createdAt?: string;
+	description?: string;
+	documentId?: string;
 	id: number;
 	images: Image[];
-	publishedAt: string;
-	size: string;
+	publishedAt?: string;
+	size?: string;
 	page: string;
-	title: string;
-	updatedAt: string;
+	title?: string;
+	updatedAt?: string;
 }
 
 export interface Image {
