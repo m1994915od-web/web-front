@@ -17,9 +17,9 @@ const AppRoutes: React.FC = () => {
 	const location = useLocation();
 	const hideAll = location.pathname === "/";
 
-	if (!addresses || addresses.length === 0) {
-		return <div className="appInfoContainer">No addresses available.</div>;
-	}
+	// if (!addresses || addresses.length === 0) {
+	// 	return <div className="appInfoContainer">No addresses available.</div>;
+	// }
 
 	return (
 		<div className="appMainContainer">
