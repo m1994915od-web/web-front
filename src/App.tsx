@@ -13,9 +13,17 @@ import "./styles/App.css";
 import "./assets/fonts/fonts.css";
 
 const AppRoutes: React.FC = () => {
-	useAddresses();
+	const { addresses, loading } = useAddresses();
 	const location = useLocation();
 	const hideAll = location.pathname === "/";
+
+	if (!loading) {
+		return <div className="appInfoContainer">Loading...</div>;
+	}
+
+	if (!addresses || addresses.length === 0) {
+		return <div className="appInfoContainer">No addresses available.</div>;
+	}
 
 	return (
 		<div className="appMainContainer">
