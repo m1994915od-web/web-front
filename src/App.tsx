@@ -17,7 +17,7 @@ const AppRoutes: React.FC = () => {
 	const location = useLocation();
 	const hideAll = location.pathname === "/";
 
-	if (!loading) {
+	if (loading) {
 		return <div className="appInfoContainer">Loading...</div>;
 	}
 
