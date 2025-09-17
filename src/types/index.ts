@@ -16,6 +16,7 @@ export interface Artwork {
 	images: Image[];
 	publishedAt: string;
 	size: string;
+	page: string;
 	title: string;
 	updatedAt: string;
 }

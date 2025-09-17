@@ -34,7 +34,7 @@ const AddressItem: React.FC<{
 						}
 						onClick={() => setIsOpen(false)}
 					>
-						{painting.title}
+						{painting.page}
 					</NavLink>
 				</li>
 			</ul>
