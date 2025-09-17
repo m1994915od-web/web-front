@@ -29,9 +29,8 @@
 
 .paintingInfo {
 	position: fixed;
-	top: clamp(80px, 10vw, 130px);
 	right: clamp(0px, 7vw, 90px);
-	background: white;
+	background: #fff;
 	padding: 1rem;
 	z-index: 10;
 	max-width: 300px;

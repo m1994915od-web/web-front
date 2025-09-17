@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { AddressProvider } from "./context/AddressContext";
+import { AddressProvider, useAddresses } from "./context/AddressContext";
 import NavigationBar from "./components/navigationBar/NavigationBar";
 import HeaderLogo from "./components/headerLogo/HeaderLogo";
 import HomePage from "./pages/HomePage";
@@ -13,13 +13,9 @@ import "./styles/App.css";
 import "./assets/fonts/fonts.css";
 
 const AppRoutes: React.FC = () => {
-	// const { addresses } = useAddresses();
+	useAddresses();
 	const location = useLocation();
 	const hideAll = location.pathname === "/";
-
-	// if (!addresses || addresses.length === 0) {
-	// 	return <div className="appInfoContainer">No addresses available.</div>;
-	// }
 
 	return (
 		<div className="appMainContainer">
