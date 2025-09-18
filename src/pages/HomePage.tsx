@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAddresses } from "../context/AddressContext";
-import logo from "../assets/logo/logo.png";
+import home from "../assets/images/home.jpg";
 import "../styles/homePage.css";
 
 const HomePage: React.FC = () => {
@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
 	if (loading) {
 		return (
 			<div className="homeContainer">
-				<img src={logo} alt="Logo" className="homeLogo" />
+				<img src={home} alt="home" className="homeImage" />
 			</div>
 		);
 	}
@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
 	return (
 		<Link to={`/address/${encodeURIComponent(addresses[0].name)}`}>
 			<div className="homeContainer">
-				<img src={logo} alt="Logo" className="homeLogo" />
+				<img src={home} alt="home" className="homeImage" />
 			</div>
 		</Link>
 	);

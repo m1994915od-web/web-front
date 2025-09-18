@@ -8,5 +8,12 @@
 .cvPageText {
 	font-size: 16px;
 	max-width: 500px;
-	margin-bottom: 24px;
+}
+
+.marginBottomS {
+	margin-bottom: 16px;
+}
+
+.marginBottomM {
+	margin-bottom: 40px;
 }

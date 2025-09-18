@@ -46,3 +46,10 @@
 	font-weight: 700;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: "Helvetica-BoldOblique";
+	src: url("./Helvetica-BoldOblique.ttf") format("truetype");
+	font-weight: bold;
+	font-style: oblique;
+}

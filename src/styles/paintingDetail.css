@@ -27,13 +27,30 @@
 	font-size: 16px;
 }
 
-.paintingInfo {
+.paintingDetailInfo {
 	position: fixed;
-	right: clamp(0px, 7vw, 90px);
+	right: 90px;
 	background: #fff;
 	padding: 1rem;
 	z-index: 10;
 	max-width: 300px;
+}
+
+@media (max-width: 1400px) {
+	.paintingDetailInfo {
+		right: 0px;
+	}
+}
+
+@media (max-width: 1290px) {
+	.paintingDetailInfo {
+		position: static;
+		padding: 0;
+		max-width: none;
+	}
+	.paintingDetailSize {
+		margin-bottom: 2rem;
+	}
 }
 
 @media (max-width: 1000px) {
@@ -51,7 +68,7 @@
 	.paintingDetailSize {
 		font-size: clamp(14px, 3vw, 16px);
 	}
-	.paintingInfo {
+	.paintingDetailInfo {
 		right: clamp(0px, 4vw, 400px);
 	}
 }
@@ -60,7 +77,7 @@
 	.paintingDetailContainer {
 		padding-left: 20px;
 	}
-	.paintingInfo {
+	.paintingDetailInfo {
 		right: 0;
 	}
 }

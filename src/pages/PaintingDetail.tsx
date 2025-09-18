@@ -16,7 +16,7 @@ const PaintingDetail: React.FC = () => {
 
 	return (
 		<div className="paintingDetailContainer">
-			<div className="paintingInfo">
+			<div className="paintingDetailInfo">
 				{painting.title && (
 					<h1 className="paintingDetailTitle">{painting.title}</h1>
 				)}

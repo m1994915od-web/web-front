@@ -1,19 +1,21 @@
 .headerLogoContainer {
 	padding-right: clamp(10px, 2.5vw, 50px);
+	padding-top: 20px;
+	padding-bottom: 20px;
 	display: flex;
 	width: 100%;
 	max-height: 130px;
 	justify-content: flex-end;
 }
 
-.headerLogoBox {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.headerLogoText {
+	font-size: clamp(18px, 2.5vw, 32px);
+	color: red;
+	font-family: "Helvetica-BoldOblique";
 }
 
-.headerLogoImage {
-	margin-top: 10px;
-	width: clamp(120px, 15vw, 200px);
-	height: auto;
+@media (max-width: 680px) {
+	.headerLogoContainer {
+		padding-top: 27px;
+	}
 }

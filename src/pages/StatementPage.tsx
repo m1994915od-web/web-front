@@ -5,50 +5,32 @@ const StatementPage: React.FC = () => {
 	return (
 		<div className="statementPageContainer">
 			<p className="statementPageText">
-				Duis blandit dictum lectus eget vulputate. Donec facilisis erat nec
-				tincidunt gravida. Fusce fringilla sapien eu enim lacinia, eget laoreet
-				odio tempus. Mauris consequat urna non cursus egestas. Ut sed eros
-				cursus, sollicitudin libero ac, cursus elit. Pellentesque nec dictum
-				ante. Proin at felis rhoncus, sollicitudin velit quis, iaculis lorem.
+				M.O’D-L’s materially intensive, abstract works explore the entanglements
+				of class, domesticity, gender, memory, and environment. Constructed from
+				scavenged and salvaged remnants—trash pulled from the street, leather
+				from a studio couch, cigarette cartons, used paper, sheer silk—the
+				surfaces are layered, sewn, patched, and often backed with duct tape.
+				These large, unstretched forms sag, curl, and warp, rejecting stability
+				and permanence in favor of precariousness, friction, and the politics of
+				care.
 			</p>
 
 			<p className="statementPageText">
-				Sed lorem justo, auctor lacinia vehicula fermentum, iaculis a est.
-				Praesent sodales turpis sed tincidunt facilisis. Nullam a libero quam.
-				Etiam scelerisque placerat ex, vitae condimentum nisi placerat in. Donec
-				sit amet purus nec nisl porttitor scelerisque eget eu ante. Vestibulum
-				gravida porta libero, tincidunt pellentesque sapien tempus sed. Nulla
-				facilisi. Etiam sit amet tempus massa, at varius dolor.
+				Labor is both method and message. Obsessive mending, repetition, and
+				erasure reference feminized and domestic labor—not to resolve or refine,
+				but to expose. The works resist containment, coherence, and polish. They
+				embrace accident and imperfection as material truth. Each surface
+				becomes a site of accumulation and undoing: what’s visible is often
+				what’s been buried, reworked, or almost discarded.
 			</p>
 
 			<p className="statementPageText">
-				Nullam accumsan ipsum eget dolor bibendum, vitae fringilla lacus
-				aliquet. Nam molestie lorem eget convallis suscipit. Maecenas pulvinar
-				ultrices odio. Integer vitae dolor scelerisque, malesuada metus et,
-				feugiat nisl. Class aptent taciti sociosqu ad litora torquent per
-				conubia nostra, per inceptos himenaeos. Nulla cursus nisl a neque
-				ultrices, in interdum urna iaculis. Nulla convallis convallis ligula,
-				non congue mauris semper faucibus. Phasellus gravida augue et enim
-				rutrum, eu semper magna suscipit.
-			</p>
-
-			<p className="statementPageText">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim
-				et justo vel accumsan. Sed ut finibus neque. Sed semper cursus
-				ullamcorper. Vivamus dignissim mollis auctor. Donec quis porttitor
-				libero, id tempor eros. Morbi mauris justo, finibus ac lacinia ut,
-				venenatis vitae dolor. Etiam non sapien feugiat, viverra quam in,
-				condimentum massa. Sed ac interdum neque, vitae consequat massa.
-			</p>
-
-			<p className="statementPageText">
-				Ut id magna erat. Cras eu orci nunc. Phasellus sem neque, viverra non
-				nisi sed, commodo accumsan lorem. Fusce feugiat maximus leo ac
-				sollicitudin. Duis semper varius metus, eu venenatis orci bibendum eget.
-				Ut varius leo sem, ac porta sapien euismod ut. Donec bibendum at lacus
-				nec efficitur. Sed vitae nisi sit amet purus feugiat convallis. Maecenas
-				pulvinar ultrices pretium. Duis ut sapien odio. Cras facilisis lorem sit
-				amet nisi luctus congue.
+				The pieces remain unapologetically raw—heavy, handled, and often nailed
+				directly to the wall. They privilege the unfinished and the unresolved,
+				where gestures remain open-ended and meaning is provisional. Every mark
+				holds the residue of past use and neglect, insisting that what’s been
+				overlooked or thrown away can be resurrected—not into something refined,
+				but into forms that endure, that refuse disappearance.
 			</p>
 		</div>
 	);
