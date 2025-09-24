@@ -26,7 +26,20 @@ img {
 	display: block;
 }
 
-button,
+button {
+	background: none;
+	border: none;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+button:focus {
+	outline: none;
+}
+
 input,
 textarea {
 	border: none;
