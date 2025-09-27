@@ -7,7 +7,7 @@ const CvPage: React.FC = () => {
 			<p className={`cvPageText marginBottomS`}>b.1994, El Paso, TX</p>
 
 			<p className={`cvPageText marginBottomM`}>
-				<a href="mailto:lunamoth.store@gmail.com" className="contacts-link">
+				<a href="mailto:M.1994.915.OD@gmail.com" className="contacts-link">
 					M.1994.915.OD@gmail.com
 				</a>
 			</p>
