@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import { AddressProvider, useAddresses } from "./context/AddressContext";
 import NavigationBar from "./components/navigationBar/NavigationBar";
 import HeaderLogo from "./components/headerLogo/HeaderLogo";
@@ -38,6 +39,7 @@ function App() {
 	return (
 		<BrowserRouter>
 			<AddressProvider>
+				<Analytics />
 				<AppRoutes />
 			</AddressProvider>
 		</BrowserRouter>
