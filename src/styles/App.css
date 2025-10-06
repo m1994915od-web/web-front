@@ -11,6 +11,10 @@ body {
 	line-height: 1;
 }
 
+body.menu-open {
+	overflow: hidden;
+}
+
 ul,
 ol {
 	list-style: none;
